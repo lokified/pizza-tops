@@ -34,3 +34,27 @@ body{
     margin-left: 20px;
     padding-top: 20px;
 }
+
+.content{
+    height: 300px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    opacity: .9;
+    margin: 100px 20px 0;
+    color: white;
+}
+.content h1{
+    text-align: center;
+}
+button{
+    margin-left: 35%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
