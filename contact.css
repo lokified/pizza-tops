@@ -48,5 +48,19 @@ body{
 #number{
     font-size: 50px;
     font-weight: 800;
-    color:brown;
+    color:black;
+}
+.contact-form{
+    margin-top: 50px;
+}
+label{
+    margin: 10px 0;
+}
+.form-control{
+    width: 70%;
+    background-color: transparent;
+}
+.btn{
+    background-color: white;
+    margin-top: 10px;
 }
