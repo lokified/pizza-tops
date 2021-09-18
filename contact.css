@@ -1,6 +1,6 @@
 body{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0)
-    ) ,url("/images/pizza3.jpg");
+    ) ,url("/images/pizza1.cms");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -34,4 +34,19 @@ body{
     margin-left: 20px;
     padding-top: 20px;
     color: white;
+}
+.container{
+    color: white;
+}
+.contact{
+    margin: 100px 0;
+    font-size: 25px;
+}
+.contact h3{
+    font-size: 50px;
+}
+#number{
+    font-size: 50px;
+    font-weight: 800;
+    color:brown;
 }
