@@ -79,3 +79,30 @@ button:hover{
     background-color: white;
     color: black;
 }
+footer{
+    background: url("/images/pizza8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    height: 500px;
+    color: white;
+}
+.last-content{
+    display: flex;
+    justify-content: space-around;
+}
+.last-content-1{
+    background-color: rgba(0,0,0,0.8);
+    width: 300px;
+    padding: 20px;
+}
+.socials{
+    background-color: black;
+    opacity: .9;
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+.socials p{
+    padding: 0 5px;
+}
