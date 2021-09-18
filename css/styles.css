@@ -1,0 +1,63 @@
+body{
+    background: linear-gradient(
+        rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0)
+    ) ,url("/images/pizza3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.links{
+    margin: 10px 20px;
+}
+.links ul{
+    display: flex;
+    justify-content: space-around;
+}
+.links li{
+    list-style: none;
+    padding: 0 10px;
+
+}
+.links a{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+}
+.logo h1{
+    color: white;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+.content{
+    height: 300px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    opacity: .9;
+    margin: 100px 20px 0;
+    color: white;
+}
+.content h1{
+    text-align: center;
+}
+button{
+    margin-left: 35%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+}
+button:hover{
+    background-color: white;
+    color: black;
+}
+.links a:hover{
+    border-bottom: 2px solid white;
+}
+
