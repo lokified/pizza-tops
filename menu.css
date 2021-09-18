@@ -7,3 +7,30 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.links{
+    margin: 10px 20px;
+}
+.links ul{
+    display: flex;
+    justify-content: space-around;
+}
+.links li{
+    list-style: none;
+    padding: 0 10px;
+
+}
+.links a{
+    color: white;
+    text-decoration: none;
+}
+.links a:hover{
+    border-bottom: 2px solid white;
+}
+.logo{
+    display: flex;
+}
+.logo h1{
+    margin-left: 20px;
+    padding-top: 20px;
+    color: white;
+}
