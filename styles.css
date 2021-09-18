@@ -4,3 +4,30 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.links{
+    margin: 10px 20px;
+}
+.links ul{
+    display: flex;
+    justify-content: space-around;
+}
+.links li{
+    list-style: none;
+    padding: 0 10px;
+}
+.links a{
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    display: flex;
+}
+.logo h1{
+    color: white;
+    margin-left: 20px;
+    padding-top: 20px;
+}
