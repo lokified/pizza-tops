@@ -124,3 +124,21 @@ footer{
 .order h2{
     text-align:  center;
 }
+.size div,.crust div,.toppings div{
+    margin: 0 20px;
+}
+.size p,.crust p,.toppings p{
+    background-color: gray;
+    padding: 5px;
+}
+label{
+    margin-left: 5px;
+}
+.order-save button{
+    background-color: black;
+    color: white;
+    width: 100%;
+    border: none;
+    margin: 10px 0;
+    padding: 10px;
+}
