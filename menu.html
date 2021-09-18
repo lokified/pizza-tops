@@ -7,6 +7,7 @@
     <title>Menu |</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="menu.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="nav">
@@ -40,7 +41,7 @@
 
                 </div>
                 <div>
-                    <button class="btn">Order Now</button>
+                    <button class="btn" id="order">Order Now</button>
                 </div>
             </div>
             <div>
@@ -91,6 +92,7 @@
     </div>
 
     <div class="order">
+        <img src="images/icons8-circled-x-96.png" alt="" height="40" id="cancel">
         <h2>Order your Pizza</h2>
         <img src="images/meat1.webp" alt="" height="200" width="100%">
         <div class="size">
