@@ -34,3 +34,13 @@
     padding-top: 20px;
     color: white;
 }
+
+.container{
+    padding: 20px 0;
+}
+.container h1{
+    text-align: center;
+}
+#head1{
+    color: brown;
+}
