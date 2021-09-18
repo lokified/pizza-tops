@@ -44,3 +44,24 @@
 #head1{
     color: brown;
 }
+.pizzas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.pizza{
+    border: 1px solid gray;
+    height: 200px;
+    width: 500px;
+    margin: 20px;
+    color: gray;
+}
+.pizza-content{
+    float: right;
+    width: 200px;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.pizza-content h4{
+    color: black;
+}
