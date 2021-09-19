@@ -87,5 +87,16 @@ $(document).ready(function(){
         $('.delivery-info').toggle(1000);
     });
 
+    // checkout button shows summary
+    $('#checkout').click(function(event){
+        event.preventDefault();
+
+        $('.order-info').hide();
+        $('.sum-confirm').show();
+    });
     
+    // alert on complete order
+    $('#confirm').click(function(){
+        alert("Thank your for choosing us! your order will arrive soon")
+    })
 });
