@@ -93,135 +93,141 @@
 
     <div class="order">
         <img src="images/icons8-circled-x-96.png" alt="" height="40" id="cancel">
-        <h2>Order your Pizza</h2>
-        <img src="images/meat1.webp" alt="" height="200" width="100%">
-        <div class="size">
-            <p>Select size:</p>
-            <div>
-                <input type="radio" id="large" name="size" value="1900">
-                <label for="large">large (ksh.1900)</label>
+        <form>
+            <h2>Order your Pizza</h2>
+            <div class="order-info">
+            <img src="images/meat1.webp" alt="" height="200" width="100%">
+            <div class="size">
+                <p>Select size:</p>
+                <div>
+                    <input type="radio" id="large" name="size" value="1900">
+                    <label for="large">large (ksh.1900)</label>
+                </div>
+                <div>
+                    <input type="radio" id="medium" name="size" value="1000">
+                    <label for="medium">medium (ksh.1000)</label>
+                </div>
+                <div>
+                    <input type="radio" id="small" name="size" value="600">
+                <label for="small">small (ksh.600)</label>
+                </div>
+            </div>
+            <div class="crust">
+                <p>Choose crust:</p>
+                <div>
+                    <input type="radio" id="stuffed" name="crust" value="300">
+                    <label for="stuffed">Stuffed (ksh.300)</label>
+                </div>
+                <div>
+                    <input type="radio" id="glutten-free" name="crust" value="200">
+                    <label for="glutten-free">Glutten free (ksh.200)</label>
+                </div>
+                <div>
+                    <input type="radio" id="crispy" name="crust" value="100">
+                    <label for="crispy">Thin & Crispy (ksh.100)</label>
+                </div>
+                <div>
+                    <input type="radio" id="original" name="crust" value="0">
+                    <label for="original">Original</label>
+                </div>
+            </div>
+            <div class="toppings">
+                <p>Choose Toppings:</p>
+                <div>
+                    <input type="checkbox" id="chicken" name="topping" value="200">
+                    <label for="chicken">Chicken (ksh.200)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mushroom" name="topping" value="200">
+                    <label for="mushroom">Mushroom (ksh.200)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pineapple" name="topping" value="200">
+                    <label for="pineapple">Pineapple (ksh.200)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="no-topping" name="topping" value="0">
+                    <label for="no-topping">Original</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="onion" name="topping" value="150">
+                    <label for="onion">Onion (ksh.150)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="olives" name="topping" value="150">
+                    <label for="olives">Olives (ksh.150)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="pepper" name="topping" value="200">
+                    <label for="pepper">Green Pepper (ksh.200)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tomato" name="topping" value="150">
+                    <label for="tomato">Tomato (ksh.150)</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="sauce" name="topping" value="200">
+                    <label for="sauce">BBQ sauce (ksh.200)</label>
+                </div>
             </div>
             <div>
-                <input type="radio" id="medium" name="size" value="1000">
-                <label for="medium">medium (ksh.1000)</label>
+                <label for="orders-selected">How many pizzas do you want?</label>
+                        <select name="pizza-order" id="orders-selected">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            
+                        </select>
+            </div>
+            <div class="order-save">
+                <button id="total-charge" class="btn">Save your order</button>
             </div>
             <div>
-                <input type="radio" id="small" name="size" value="600">
-            <label for="small">small (ksh.600)</label>
+                <p>
+                    Total  <span id="pizzaCharges"></span>
+                </p>
+            </div>
+    
+        
+    
+        <p>Do you want delivery services? <span id="show-delivery">Click here</span></p>
+        <div class="delivery-info">
+            <p>*Standard delivery charges is ksh.150</p>
+            <div class="location-add">
+               <input type="text" placeholder="Add delivery location" id="location" required>
+               <button id="add-location">Add</button>
+            </div>
+        </div> 
+        <div class="checkout">
+            <button class="btn" id="checkout">checkout</button>
+        </div>
+        </div>
+    
+        <div class="Summary-confirm">
+            <div class="summary">
+                <p>Size : <span id="s-size"></span> </p>
+                <p>Crust : <span id="s-crust"></span>  </p>
+                <p>Toppings : <span id="s-topping"></span> </p>
+                <p>No. of pizza : <span id="s-number"></span> </p>
+                <p>Delivery Location: <span id="s-location"></span></p>
+    
+                <p id="total">
+                    Total : <span class="pizzaCharges"></span>
+                </p> 
+            </div>
+            <div>
+                <button id="confirm">Confirm your order</button>
             </div>
         </div>
-        <div class="crust">
-            <p>Choose crust:</p>
-            <div>
-                <input type="radio" id="stuffed" name="crust" value="300">
-                <label for="stuffed">Stuffed (ksh.300)</label>
-            </div>
-            <div>
-                <input type="radio" id="glutten-free" name="crust" value="200">
-                <label for="glutten-free">Glutten free (ksh.200)</label>
-            </div>
-            <div>
-                <input type="radio" id="crispy" name="crust" value="100">
-                <label for="crispy">Thin & Crispy (ksh.100)</label>
-            </div>
-            <div>
-                <input type="radio" id="original" name="crust" value="0">
-                <label for="original">Original</label>
-            </div>
-        </div>
-        <div class="toppings">
-            <p>Choose Toppings:</p>
-            <div>
-                <input type="checkbox" id="chicken" name="topping" value="200">
-                <label for="chicken">Chicken (ksh.200)</label>
-            </div>
-            <div>
-                <input type="checkbox" id="mushroom" name="topping" value="200">
-                <label for="mushroom">Mushroom (ksh.200)</label>
-            </div>
-            <div>
-                <input type="checkbox" id="pineapple" name="topping" value="200">
-                <label for="pineapple">Pineapple (ksh.200)</label>
-            </div>
-            <div>
-                <input type="checkbox" id="no-topping" name="topping" value="0">
-                <label for="no-topping">Original</label>
-            </div>
-            <div>
-                <input type="checkbox" id="onion" name="topping" value="150">
-                <label for="onion">Onion (ksh.150)</label>
-            </div>
-            <div>
-                <input type="checkbox" id="olives" name="topping" value="150">
-                <label for="olives">Olives (ksh.150)</label>
-            </div>
-            <div>
-                <input type="checkbox" id="pepper" name="topping" value="200">
-                <label for="pepper">Green Pepper (ksh.200)</label>
-            </div>
-            <div>
-                <input type="checkbox" id="tomato" name="topping" value="150">
-                <label for="tomato">Tomato (ksh.150)</label>
-            </div>
-            <div>
-                <input type="checkbox" id="sauce" name="topping" value="200">
-                <label for="sauce">BBQ sauce (ksh.200)</label>
-            </div>
-        </div>
-        <div>
-            <label for="orders-selected">How many pizzas do you want?</label>
-                    <select name="pizza-order" id="orders-selected">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        
-                    </select>
-        </div>
-        <div class="order-save">
-            <button id="total-charge" class="btn">Save your order</button>
-        </div>
-        <div>
-            <p>
-                Total  <span id="pizzaCharges"></span>
-            </p>
-        </div>
-
-    </div>
-
-    <p>Do you want delivery services? <span id="show-delivery">Click here</span></p>
-    <div class="delivery-info">
-        <p>*Standard delivery charges is ksh.150</p>
-        <div class="location-add">
-           <input type="text" placeholder="Add delivery location" id="location" required>
-           <button id="add-location">Add</button>
-        </div>
-    </div> 
-    <div class="checkout">
-        <button class="btn" id="checkout">checkout</button>
-    </div>
-
-    <div class="Summary-confirm">
-        <div class="summary">
-            <p>Size : <span id="s-size"></span> </p>
-            <p>Crust : <span id="s-crust"></span>  </p>
-            <p>Toppings : <span id="s-topping"></span> </p>
-            <p>No. of pizza : <span id="s-number"></span> </p>
-            <p>Delivery Location: <span id="s-location"></span></p>
-
-            <p id="total">
-                Total : <span class="pizzaCharges"></span>
-            </p> 
-        </div>
-        <div>
-            <button id="confirm">Confirm your order</button>
-        </div>
+        </form>
+        
 
     </div>
 
