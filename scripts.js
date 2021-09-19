@@ -44,7 +44,7 @@ $(document).ready(function(){
 
         let totalPizzaCharge = new totalOrders(size,crust,totalToppings,numberOfPizza);
 
-        $('#pizzaCharges').text("Ksh."+totalPizzaCharge.totalCharges());
+        $('.pizzaCharges').text("Ksh."+totalPizzaCharge.totalCharges());
 
         // Adds location to summary
         $('#add-location').click(function(event){
@@ -53,12 +53,12 @@ $(document).ready(function(){
             // Adds delivery charges
             let deliveryCharge = new totalOrders(size,crust,totalToppings,numberOfPizza);
 
-            $('#pizzaCharges').text("Ksh."+deliveryCharge.addDeliveryCharge());
+            $('.pizzaCharges').text("Ksh."+deliveryCharge.addDeliveryCharge());
              
             // collects delivery location
             let deliveryLocation = $('#location').val();
 
-            $('s-location').text(deliveryLocation);
+            $('#s-location').text(deliveryLocation);
 
             // alert the user a message
             alert(" your order will be delivered to your location-"+deliveryLocation);
@@ -67,5 +67,18 @@ $(document).ready(function(){
             // hides delivery info
             $('.delivery-info').hide();
         });
+
+        // display selected values in a summary
+        let idSize = $('input:radio[name=size]:checked').attr('id');
+        let idCrust = $('input:radio[name=crust]:checked').attr('id');
+        let idToppings = [];
+           $.each($('input:checkbox[name=topping]:checked'),function(){
+               idToppings.push($(this).attr('id'));
+           });
+        
+        $('#s-size').text(idSize + " - ksh." + size);
+        $('#s-crust').text(idCrust + " - ksh." + crust);
+        $('#s-topping').text( idToppings.join(',') + " - ksh." +totalToppings );
+        $('#s-number').text(numberOfPizza);
     });
 });
