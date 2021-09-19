@@ -81,4 +81,11 @@ $(document).ready(function(){
         $('#s-topping').text( idToppings.join(',') + " - ksh." +totalToppings );
         $('#s-number').text(numberOfPizza);
     });
+
+    // show delivery information
+    $('#show-delivery').click(function(){
+        $('.delivery-info').toggle(1000);
+    });
+
+    
 });
