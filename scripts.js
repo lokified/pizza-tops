@@ -10,6 +10,11 @@ totalOrders.prototype.totalCharges = function(){
     return (this.size + this.crust + this.toppings || this.size + this.crust || this.crust + this.toppings || this.size + this.toppings) * this.orders;
 } 
 
+  //Adds delivery charges
+  totalOrders.prototype.addDeliveryCharge = function(){
+    return ((this.size + this.crust + this.toppings || this.size + this.crust || this.crust + this.toppings || this.size + this.toppings) * this.orders) + 150;
+  }
+
 // user interface
 $(document).ready(function(){
     
@@ -40,5 +45,15 @@ $(document).ready(function(){
         let totalPizzaCharge = new totalOrders(size,crust,totalToppings,numberOfPizza);
 
         $('#pizzaCharges').text("Ksh."+totalPizzaCharge.totalCharges());
+
+        // Adds location to summary
+        $('#add-location').click(function(event){
+            event.preventDefault();
+
+            // Adds delivery charges
+            let deliveryCharge = new totalOrders(sizes,crusts,totalToppings,numberOfPizza);
+
+            $('.pizzaCharges').text(deliveryCharge.addDeliveryCharge());
+        });
     });
 });
