@@ -25,6 +25,7 @@ $(document).ready(function(){
     
     // hides the information
     $('#cancel').click(function(){
+        $("form")[0].reset();
         $('.order').hide();
     });
 
@@ -92,11 +93,11 @@ $(document).ready(function(){
         event.preventDefault();
 
         $('.order-info').hide();
-        $('.sum-confirm').show();
+        $('.summary-confirm').show();
     });
     
     // alert on complete order
     $('#confirm').click(function(){
-        alert("Thank your for choosing us! your order will arrive soon")
+        alert("Thank you for choosing us! your order will arrive soon")
     })
 });
