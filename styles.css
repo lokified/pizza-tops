@@ -51,8 +51,11 @@ button{
     margin-left: 35%;
     border: 1px solid white;
     background-color: transparent;
-    color: white;
     padding: 5px;
+}
+button a{
+    color: white;
+    text-decoration: none;
 }
 button:hover{
     background-color: white;
