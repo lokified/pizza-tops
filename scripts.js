@@ -51,9 +51,21 @@ $(document).ready(function(){
             event.preventDefault();
 
             // Adds delivery charges
-            let deliveryCharge = new totalOrders(sizes,crusts,totalToppings,numberOfPizza);
+            let deliveryCharge = new totalOrders(size,crust,totalToppings,numberOfPizza);
 
-            $('.pizzaCharges').text(deliveryCharge.addDeliveryCharge());
+            $('#pizzaCharges').text("Ksh."+deliveryCharge.addDeliveryCharge());
+             
+            // collects delivery location
+            let deliveryLocation = $('#location').val();
+
+            $('s-location').text(deliveryLocation);
+
+            // alert the user a message
+            alert(" your order will be delivered to your location-"+deliveryLocation);
+            
+
+            // hides delivery info
+            $('.delivery-info').hide();
         });
     });
 });
