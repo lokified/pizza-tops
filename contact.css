@@ -1,6 +1,6 @@
 body{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0)
-    ) ,url("/images/pizza1.cms");
+    ) ,url("../images/pizza1.cms");
     background-repeat: no-repeat;
     background-size: cover;
 }
