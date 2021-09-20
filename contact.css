@@ -64,3 +64,32 @@ label{
     background-color: white;
     margin-top: 10px;
 }
+@media screen and (max-width: 300px){
+    .links{
+        margin: 10px 15px;
+    }
+    .links li{
+        list-style: none;
+        padding: 5px;
+    }
+    .contact{
+        margin: 10px 5px;
+        font-size: 15px;
+    }
+    .contact h3{
+        font-size: 30px;
+    }
+    #number{
+        font-size: 30px;
+    }
+
+    .contact-form{
+        margin: 10px 10px;
+    }
+    .form-control{
+        width: 90%;
+    }
+    .btn{
+        margin: 20px 10px;
+    }
+}

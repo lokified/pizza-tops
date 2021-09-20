@@ -195,3 +195,62 @@ em{
     border-radius: 10px;
     padding: 10px;
 }
+
+@media screen and (max-width: 300px){
+    .links{
+        margin: 10px 15px;
+    }
+    .links li{
+        list-style: none;
+        padding: 5px;
+    }
+    .pizzas{
+        display: block;
+    }
+    .pizza{
+        height: 332px;
+        width: 250px;
+        margin: 20px;
+    }
+    .pizza-content{
+        float: none;
+        display: block;
+        padding: 0 10px;
+    }
+    .pizzas button{
+        margin-left: 30%;
+    }
+    footer{
+        background-size: cover;
+    }
+    .last-content{
+        display: block;
+        padding: 5px 0;
+    }
+    .last-content-1{
+        max-width: 250px;
+        padding: 0 20px;
+        font-size: 13px;
+    }
+    .last-content-1 h5{
+        text-align: center;
+    }
+    .socials{
+        margin-top: 20px;
+        display: block;
+    }
+    .order {
+        height: 600px;
+        max-width: 270px;
+        position: absolute;
+        top: 180px;
+        left: 5%;
+    }
+    .summary span{
+        width: 200px;
+    }
+    #confirm{
+        margin-left: 15%;
+        font-size: 20px;
+    }
+}

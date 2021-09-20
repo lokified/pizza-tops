@@ -61,3 +61,23 @@ button:hover{
     background-color: white;
     color: black;
 }
+
+@media screen and (max-width: 300px) {
+    body{
+        background-size: contain;
+    }
+    .links{
+        margin: 10px 15px;
+    }
+    .links li{
+        list-style: none;
+        padding: 5px;
+    }
+    .content{
+        max-width: 250px;
+        height: 400px;
+    }
+    button{
+        margin-left: 30%;
+    }
+}
