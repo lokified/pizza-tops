@@ -72,7 +72,8 @@ $(document).ready(function () {
 
         // resets the form
         $("form#order")[0].reset();
-
+        
+        // Shows the total charges
         totalCost += pizzaCharge.totalCharges();
 
         $('.pizzaCharges').text("Ksh."+totalCost);
@@ -95,8 +96,9 @@ $(document).ready(function () {
         $('.delivery-info').hide();
     });
 
+      // shows the final total charges
     $('#checkout').click(function(){
         $('.order-info').hide();
         $('.summary-confirm').show();
-    })
+    });
 });
