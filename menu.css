@@ -274,3 +274,36 @@ em{
         font-size: 20px;
     }
 }
+@media screen and (max-width: 500px){
+    .pizzas{
+        display: block;
+        margin: 0 21%;
+    }
+    .pizza{
+        height: 332px;
+        width: 250px;
+        margin: 20px;
+    }
+    .pizza-content{
+        float: none;
+        display: block;
+        padding: 0 10px;
+    }
+    .pizzas button{
+        margin-left: 30%;
+    }
+    .last-content{
+        display: block;
+        padding:  0;
+    }
+    .last-content-1{
+        max-width: 250px;
+        padding: 2px 20px;
+        font-size: 13px;
+        margin-left: 20%;
+    }
+    .socials{
+        margin-top: 20px;
+        display: block;
+    }
+}

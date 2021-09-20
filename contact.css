@@ -93,3 +93,25 @@ label{
         margin: 20px 10px;
     }
 }
+@media screen and (max-width: 500px){
+    .contact{
+        margin: 10px 5px;
+        font-size: 15px;
+    }
+    .contact h3{
+        font-size: 40px;
+    }
+    #number{
+        font-size: 40px;
+    }
+
+    .contact-form{
+        margin: 10px 10px;
+    }
+    .form-control{
+        width: 90%;
+    }
+    .btn{
+        margin: 20px 10px;
+    }
+}
