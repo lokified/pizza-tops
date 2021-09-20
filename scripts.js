@@ -1,103 +1,94 @@
 // Business logic
-function totalOrders(size,crust,topping,orders){
+function totalOrders(size, crust, topping, orders) {
     this.size = size;
     this.crust = crust;
     this.toppings = topping;
     this.orders = orders;
 }
 
-totalOrders.prototype.totalCharges = function(){
-    return (this.size + this.crust + this.toppings || this.size + this.crust || this.crust + this.toppings || this.size + this.toppings) * this.orders;
-} 
+totalOrders.prototype.totalCharges = function () {
+    return (this.size + this.crust + this.toppings) * this.orders;
+}
 
-  //Adds delivery charges
-  totalOrders.prototype.addDeliveryCharge = function(){
-    return ((this.size + this.crust + this.toppings || this.size + this.crust || this.crust + this.toppings || this.size + this.toppings) * this.orders) + 150;
-  }
+let totalCost = 0;
 
 // user interface
-$(document).ready(function(){
-    
+$(document).ready(function () {
+
     // shows information to complete order
-    $('.btn').click(function(){
+    $('.btn').click(function () {
         $('.order').show();
     });
-    
+
     // hides the information
-    $('#cancel').click(function(){
+    $('#cancel').click(function () {
         $("form")[0].reset();
         $('.order').hide();
     });
 
     // collects values of the order
-    $('#total-charge').last().click(function(){
+    $('form#order').last().submit(function (event) {
+
+        event.preventDefault();
+
         let size = parseInt($('input:radio[name=size]:checked').val());
         let crust = parseInt($('input:radio[name=crust]:checked').val());
-        let topping =[];
-            $.each($('input:checkbox[name=topping]:checked'),function(){
-                topping.push(parseInt($(this).val()))
-            });
-            let totalToppings = 0;
-            for(let i=0; i<topping.length; i++){
-                totalToppings += topping[i];
-            }
-        let numberOfPizza = parseInt($('#orders-selected').val());
-
-        let totalPizzaCharge = new totalOrders(size,crust,totalToppings,numberOfPizza);
-
-        $('.pizzaCharges').text("Ksh."+totalPizzaCharge.totalCharges());
-
-        // Adds location to summary
-        $('#add-location').click(function(event){
-            event.preventDefault();
-
-            // Adds delivery charges
-            let deliveryCharge = new totalOrders(size,crust,totalToppings,numberOfPizza);
-
-            $('.pizzaCharges').text("Ksh."+deliveryCharge.addDeliveryCharge());
-             
-            // collects delivery location
-            let deliveryLocation = $('#location').val();
-
-            $('#s-location').text(deliveryLocation);
-
-            // alert the user a message
-            alert(" your order will be delivered to your location-"+deliveryLocation);
-            
-
-            // hides delivery info
-            $('.delivery-info').hide();
+        let topping = [];
+        $.each($('input:checkbox[name=topping]:checked'), function () {
+            topping.push(parseInt($(this).val()))
         });
+        let totalToppings = 0;
+        for (let i = 0; i < topping.length; i++) {
+            totalToppings += topping[i];
+        }
+
 
         // display selected values in a summary
         let idSize = $('input:radio[name=size]:checked').attr('id');
         let idCrust = $('input:radio[name=crust]:checked').attr('id');
         let idToppings = [];
-           $.each($('input:checkbox[name=topping]:checked'),function(){
-               idToppings.push($(this).attr('id'));
-           });
-        
-        $('#s-size').text(idSize + " - ksh." + size);
-        $('#s-crust').text(idCrust + " - ksh." + crust);
-        $('#s-topping').text( idToppings.join(',') + " - ksh." +totalToppings );
-        $('#s-number').text(numberOfPizza);
-    });
+        $.each($('input:checkbox[name=topping]:checked'), function () {
+            idToppings.push($(this).attr('id'));
+        });
 
-    // show delivery information
-    $('#show-delivery').click(function(){
-        $('.delivery-info').toggle(1000);
-    });
+        let numberOfPizza = parseInt($('#orders-selected').val());
 
-    // checkout button shows summary
-    $('#checkout').click(function(event){
+        $('.first-summary ol').append(
+            "<li>" + "<p>" + "Size : <br>" + idSize + ' - ksh.' + size + "</p>" +
+            "<p>" + "Crust : <br>" + idCrust + ' - ksh.' + crust + "</p>" +
+            "<p>" + "Toppings : <br>" + idToppings + ' - ksh.' + totalToppings + "</p>"
+
+            + 
+            "<p>" + "Number of pizza : <br>" + numberOfPizza + "</p>"
+
+            + "</li>"
+        );
+
+
+        //calculates total number of pizza
+
+        let pizzaCharge = new totalOrders(size, crust, totalToppings, numberOfPizza);
+
+        $('.pizzaCharges').text("Ksh." + pizzaCharge.totalCharges());
+
+        // resets the form
+        $("form#order")[0].reset();
+
+        totalCost += pizzaCharge.totalCharges();
+
+        $('.pizzaCharges').text("Ksh."+totalCost);
+
+    });
+    $('.delivery-info form').submit(function (event) {
+
         event.preventDefault();
 
-        $('.order-info').hide();
-        $('.summary-confirm').show();
+        // adds delivery charges
+        $('.pizzaCharges').text(totalCost + 150);
+
+
+        alert(" your order will be delivered to your location");
+
+        $('.delivery-info').hide();
     });
-    
-    // alert on complete order
-    $('#confirm').click(function(){
-        alert("Thank you for choosing us! your order will arrive soon")
-    })
 });
