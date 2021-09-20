@@ -3,7 +3,7 @@
     justify-content: space-between;
     background: linear-gradient(
         rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,0)
-    ),url("../images/GLUTEN-FREE-PIZZA.jpg");
+    ),url("./images/GLUTEN-FREE-PIZZA.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -80,7 +80,7 @@ button:hover{
     color: black;
 }
 footer{
-    background: url("../images/pizza8.jpg");
+    background: url("./images/pizza8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
