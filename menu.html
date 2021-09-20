@@ -195,13 +195,18 @@
                      <button>Save your order</button>
                 </div>
             </form>
-            
-             <div class="first-summary">
-                 <ol>
 
-                 </ol>
-             </div>
-             <div>
+            <div >
+                <table class="first-summary">
+                    <tr>
+                        <th>size</th>
+                        <th>crust</th>
+                        <th>toppings</th>
+                        <th>Quantity</th>
+                    </tr>
+                </table>
+            </div>
+             <div class="pizza-charge">
                  <p>
                     Total charges: <span class="pizzaCharges"></span>
                  </p>
@@ -212,10 +217,10 @@
              <div class="delivery-info">
                  <form>
 
-                    <p>*Standard delivery charges is ksh.150</p>
+                    <p> <em>*Standard delivery charges is ksh.150</em> </p>
                     <div class="location-add">
                          <input type="text" placeholder="Add delivery location" id="location" required>
-                         <button id="add-location">Add</button>
+                         <button id="add-location" class="bt btn-success">Add</button>
                       </div>
 
                  </form>

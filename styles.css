@@ -62,7 +62,7 @@ button:hover{
     color: black;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
     body{
         background-size: contain;
     }

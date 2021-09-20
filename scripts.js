@@ -52,16 +52,15 @@ $(document).ready(function () {
         });
 
         let numberOfPizza = parseInt($('#orders-selected').val());
-
-        $('.first-summary ol').append(
-            "<li>" + "<p>" + "Size : <br>" + idSize + ' - ksh.' + size + "</p>" +
-            "<p>" + "Crust : <br>" + idCrust + ' - ksh.' + crust + "</p>" +
-            "<p>" + "Toppings : <br>" + idToppings + ' - ksh.' + totalToppings + "</p>"
-
-            + 
-            "<p>" + "Number of pizza : <br>" + numberOfPizza + "</p>"
-
-            + "</li>"
+         
+        $('.first-summary').show();
+        $('.first-summary').append(
+            "<tr>"+
+            "<td>"+idSize+"</td>"+
+            "<td>"+idCrust+"</td>"+
+            "<td>"+idToppings +"</td>"+
+            "<td>"+numberOfPizza+"</td>"+
+        "</tr>"
         );
 
 
@@ -79,16 +78,25 @@ $(document).ready(function () {
         $('.pizzaCharges').text("Ksh."+totalCost);
 
     });
+
+    $('#show-delivery').click(function(){
+        $('.delivery-info').show(1000);
+    })
     $('.delivery-info form').submit(function (event) {
 
         event.preventDefault();
 
         // adds delivery charges
-        $('.pizzaCharges').text(totalCost + 150);
+        $('.pizzaCharges').text("Ksh."+(totalCost + 150));
 
 
         alert(" your order will be delivered to your location");
 
         $('.delivery-info').hide();
     });
+
+    $('#checkout').click(function(){
+        $('.order-info').hide();
+        $('.summary-confirm').show();
+    })
 });
