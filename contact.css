@@ -115,3 +115,8 @@ label{
         margin: 20px 10px;
     }
 }
+@media screen and (max-width: 800px){
+    .contact-form{
+        margin: 0 0 20px 10px;
+    }
+}

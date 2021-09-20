@@ -306,4 +306,40 @@ em{
         margin-top: 20px;
         display: block;
     }
+    .order {
+        height: 600px;
+        max-width: 350px;
+        position: absolute;
+        top: 180px;
+        left: 15%;
+    }
+    #total{
+        margin: 0 5%;
+    }
+    #confirm{
+        margin-left: 20%;
+        font-size: 15px;
+    }
+    .summary-confirm{
+        margin-top: 30%;
+    }
+}
+@media screen and (max-width: 800px){
+    .order {
+        height: 600px;
+        max-width: 500px;
+        position: absolute;
+        top: 180px;
+        left: 15%;
+    }
+    #total{
+        margin: 0 5%;
+    }
+    #confirm{
+        margin-left: 20%;
+        font-size: 30px;
+    }
+    .summary-confirm{
+        margin-top: 30%;
+    }
 }
