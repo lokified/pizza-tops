@@ -114,8 +114,8 @@ $(document).ready(function () {
         $('.pick-up form').submit(function (event) {
     
             event.preventDefault();
-            let yourName = $("#yourName").val();
-            alert(yourName + ",come pick your order in 40 minutes");
+            let yourName2 = $("#yourName").val();
+            alert(yourName2 + ",come pick your order in 40 minutes");
 
             $('.pick-up').hide();
         });

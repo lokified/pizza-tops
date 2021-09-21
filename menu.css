@@ -1,3 +1,6 @@
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
+}
 .nav{
     display: flex;
     justify-content: space-between;
@@ -212,7 +215,7 @@ em{
     margin: 0 30%;
     font-size: 40px;
 }
-#confirm{
+.confirm{
     margin-left: 30%;
     font-size: 30px;
     background-color: coral;
