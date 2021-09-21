@@ -26,11 +26,12 @@ $(document).ready(function () {
         $('.order').hide();
     });
 
-    // collects values of the order
+    
     $('form#order').last().submit(function (event) {
 
         event.preventDefault();
 
+        // collects values of the order
         let size = parseInt($('input:radio[name=size]:checked').val());
         let crust = parseInt($('input:radio[name=crust]:checked').val());
         let topping = [];
@@ -80,25 +81,55 @@ $(document).ready(function () {
 
     });
 
-    $('#show-delivery').click(function(){
-        $('.delivery-info').show(1000);
-    })
-    $('.delivery-info form').submit(function (event) {
+    // options for delivery or not
+    let deliverSelected = $('#show-delivery');
+    let noDeliver = $('#show-no-delivery');
 
-        event.preventDefault();
+    if(deliverSelected){ 
+        
+        $('#show-delivery').click(function(){
+            $('.pick-up').hide();
+            $('.delivery-info').toggle(1000);
+        });
+        $('.delivery-info form').submit(function (event) {
+    
+            event.preventDefault();
+    
+            // adds delivery charges
+            $('.pizzaCharges').text("Ksh."+(totalCost + 150));
+    
+            let yourName = $("#yourName").val();
+            alert(yourName+ ",your order will be delivered to your location");
+    
+            $('.delivery-info').hide();
+        });
+        
+    }
+    if(noDeliver){
+        
+        $('#show-no-delivery').click(function(){
+            $('.delivery-info').hide();
+            $('.pick-up').toggle(1000);
+        });
+        $('.pick-up form').submit(function (event) {
+    
+            event.preventDefault();
+            let yourName = $("#yourName").val();
+            alert(yourName + ",come pick your order in 40 minutes");
 
-        // adds delivery charges
-        $('.pizzaCharges').text("Ksh."+(totalCost + 150));
+            $('.pick-up').hide();
+        });
+    }
 
 
-        alert(" your order will be delivered to your location");
-
-        $('.delivery-info').hide();
-    });
-
-      // shows the final total charges
+      // shows the final total charges 
     $('#checkout').click(function(){
         $('.order-info').hide();
         $('.summary-confirm').show();
+    });
+
+    // confirming order
+    $('#confirm').submit(function(){
+       alert("Thank you for choosing us!");
     });
 });
