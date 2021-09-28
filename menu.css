@@ -122,7 +122,7 @@ footer{
     background-color: white;
     overflow: scroll;
     overflow-x: hidden;
-    display: none;
+    /* display: none; */
 }
 .order h2{
     text-align:  center;
@@ -185,14 +185,16 @@ em{
 .first-summary{
     display: none;
 }
-table ,th,td{
-    border-bottom: 1px solid black;
+table {   
+    counter-reset: rowNumber -1;
 }
-table{
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-    margin: 10px 30px;   
+table tr{
+    counter-increment: rowNumber;
+}
+table tr td:first-child::before {   
+    content: counter(rowNumber);   
+    min-width: 1em;   
+    margin-right: 0.5em;
 }
 
 em{

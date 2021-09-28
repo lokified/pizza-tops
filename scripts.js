@@ -56,12 +56,15 @@ $(document).ready(function () {
          
         $('.first-summary').show();
         $('.first-summary').append(
-            "<tr>"+
-            "<td>"+idSize+"</td>"+
-            "<td>"+idCrust+"</td>"+
-            "<td>"+idToppings +"</td>"+
-            "<td>"+numberOfPizza+"</td>"+
-        "</tr>"
+           "<tbody>"+
+               "<tr class='table-dark'>"+
+                   "<td>"+"</td>"+
+                   "<td>"+idSize+"</td>"+
+                   "<td>"+idCrust+"</td>"+
+                   "<td>"+idToppings +"</td>"+
+                   "<td>"+numberOfPizza+"</td>"+
+               "</tr>"+
+           "</tbody>"
         );
 
 
