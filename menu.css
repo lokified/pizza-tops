@@ -114,15 +114,15 @@ footer{
 
 .order {
     height: 500px;
-    width: 700px;
+    max-width: 700px;
     border: 2px solid black;
     position: absolute;
-    top: 100px;
+    top: 170px;
     left: 30%;
     background-color: white;
     overflow: scroll;
     overflow-x: hidden;
-    /* display: none; */
+    display: none;
 }
 .order h2{
     text-align:  center;
@@ -234,6 +234,9 @@ em{
         list-style: none;
         padding: 5px;
     }
+    .container{
+        margin-left: -55px;
+    }
     .pizzas{
         display: block;
     }
@@ -246,9 +249,6 @@ em{
         float: none;
         display: block;
         padding: 0 10px;
-    }
-    .pizzas button{
-        margin-left: 30%;
     }
     footer{
         background-size: cover;
@@ -271,7 +271,7 @@ em{
     }
     .order {
         height: 600px;
-        max-width: 270px;
+        width: 80%;
         position: absolute;
         top: 180px;
         left: 5%;
@@ -318,10 +318,8 @@ em{
     }
     .order {
         height: 600px;
-        max-width: 350px;
-        position: absolute;
-        top: 180px;
-        left: 15%;
+        width: 80%;
+        left: 10%;
     }
     #total{
         margin: 0 5%;
@@ -337,10 +335,10 @@ em{
 @media screen and (max-width: 800px){
     .order {
         height: 600px;
-        max-width: 500px;
+        width: 80%;
         position: absolute;
         top: 180px;
-        left: 15%;
+        left: 10%;
     }
     #total{
         margin: 0 5%;
