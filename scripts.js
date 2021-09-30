@@ -101,10 +101,10 @@ $(document).ready(function () {
             // adds delivery charges
             $('.pizzaCharges').text("Ksh."+(totalCost + 150));
     
-            let yourName = $("#yourName").val();
-            alert(yourName+ ",your order will be delivered to your location");
+            let yourNames = $("#yourName1").val();
     
             $('.delivery-info').hide();
+            $('.delivery-info2').append("<p class='delivery-info2 alert alert-success text-center'>"+yourNames + ", your order will be delivered to your location"+"</p>")
         });
         
     }
@@ -117,8 +117,8 @@ $(document).ready(function () {
         $('.pick-up form').submit(function (event) {
     
             event.preventDefault();
-            let yourName2 = $("#yourName").val();
-            alert(yourName2 + ",come pick your order in 40 minutes");
+            let yourName2 = $("#yourName2").val();
+            $('.delivery-info2').append("<p class='delivery-info2 alert alert-success text-center'>"+yourName2 + ",your order will be ready in 40 minutes "+"</p>")
 
             $('.pick-up').hide();
         });
